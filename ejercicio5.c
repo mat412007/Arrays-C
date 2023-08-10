@@ -4,12 +4,20 @@
 
 int main(int argc, char *argv[]){
     srand(time(NULL));
-    int n = atoi(argv[1]);
-    int m = atoi(argv[2]);
-    int nums[n];
-    for(int i = 0; i < n; i++){
-        nums[i] = rand() % m;
-        printf("%d\n", nums[i]);
+    int numeros[100];
+    int maximo = 0;
+    int minimo = 100;
+    for(int i = 0; i < 100; i++){
+        numeros[i] = rand() % 101;
+        if(numeros[i] > maximo){
+            maximo = numeros[i];
+        }
+        if(numeros[i] < minimo){
+            minimo = numeros[i];
+        }
     }
+    printf("El minimo es: %d\n", minimo);
+    printf("El maximo es: %d\n", maximo);
     return 0;
+
 }

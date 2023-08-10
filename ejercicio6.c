@@ -2,15 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char *argv[]){
-    srand(time(NULL));
-    int a[100];
-    double suma = 0.0;
-    for(int i = 0; i < 100; i++){
-        a[i] = rand() % 100;
-        suma = suma + a[i];
+void swap(int a[], int i, int j){
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
+}
+void printarr(int a[], int n){
+    printf("[ ");
+    for(int i = 0; i < n; i++){
+        
     }
-    double promedio = suma / 100;
-    printf("%.2f\n", promedio);
-    return 0;
+}
+
+int main(int argc, char *argv[]){
+
 }
