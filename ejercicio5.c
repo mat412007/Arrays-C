@@ -16,6 +16,7 @@ int main(int argc, char *argv[]){
             minimo = numeros[i];
         }
     }
+    
     printf("El minimo es: %d\n", minimo);
     printf("El maximo es: %d\n", maximo);
     return 0;
