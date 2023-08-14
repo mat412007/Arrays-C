@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(int argc, char *argv[]){
-    int n = atoi(argv[1]);
-    int nums[n];
-    for(int i = 0; i < n; i++){
-        nums[i] = i + 1;
-        printf("%d\n", nums[i]);
+    srand(time(NULL));
+    int numeros[100];
+    float suma = 0;
+    for(int i = 0; i < 100; i++){
+        numeros[i] = rand() % 101;
+        printf("%d ", numeros[i]);
+        suma += numeros[i];
     }
+    printf("\n");
+    printf("El total es %.2f\n", suma);
+    printf("El promedio es %.4f\n", suma/100);
     return 0;
 }
